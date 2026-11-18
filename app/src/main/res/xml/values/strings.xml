@@ -1,1 +1,6 @@
-<resources><string name="service_description">Records scroll event timestamps and app package names locally to estimate scrolling sessions. Does not read screen contents.</string></resources>
+
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TimeGuard V2</string>
+    <string name="service_description">TimeGuard detects scrolling events in supported apps to help you understand your screen habits.</string>
+</resources>

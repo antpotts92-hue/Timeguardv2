@@ -1,0 +1,1 @@
+<resources><string name="service_description">Records scroll event timestamps and app package names locally to estimate scrolling sessions. Does not read screen contents.</string></resources>

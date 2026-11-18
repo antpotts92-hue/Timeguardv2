@@ -34,7 +34,9 @@ class MainActivity : Activity() {
         root.addView(label("${data.events} scroll events", 27f))
         root.addView(label("${data.sessions} estimated sessions  •  ${data.activeMinutesEstimate} estimated active minutes", 16f))
         root.addView(label("Session estimate: consecutive events in the same app within 60 seconds. This is NOT actual screen time; single-event sessions contribute 0 minutes.", 12f))
-        data.perApp.take(10).forEach { (pkg, count) -> root.addView(label("${friendly(pkg)}  •  $count events", 15f)) }
+        data.perApp.entries.toList().take(10).forEach { entry ->
+    root.addView(label("${friendly(entry.key)} • ${entry.value} events", 15f))
+        }
         button("REFRESH DASHBOARD") { render() }
         root.addView(label("✦ SCREEN COACH", 23f, mint))
         val goal = ScrollStore.goal(this)
